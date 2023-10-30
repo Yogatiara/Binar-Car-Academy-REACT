@@ -5,12 +5,12 @@ import RegisterButton from './RegisterButton';
 const NavigationBar = () => {
   return (
     <>
-      <Navbar className="hexColor-f1f3ff  ">
+      <Navbar className="hexColor-f1f3ff">
         <Container>
           <Navbar.Brand>
             <Image src="logo.png" alt="logo" />
           </Navbar.Brand>
-          <Nav className="column-gap-3 ">
+          <Nav className="column-gap-3 fw-medium">
             <Nav.Link>Our Services</Nav.Link>
             <Nav.Link>Why Us</Nav.Link>
             <Nav.Link>Testimonial</Nav.Link>
