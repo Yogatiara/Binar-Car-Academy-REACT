@@ -8,7 +8,7 @@ const NavigationBar = () => {
       <Navbar className="hexColor-f1f3ff">
         <Container>
           <Navbar.Brand>
-            <Image src="logo.png" alt="logo" />
+            <Image src="./images/logo.png" alt="logo" />
           </Navbar.Brand>
           <Nav className="column-gap-3 fw-medium">
             <Nav.Link>Our Services</Nav.Link>

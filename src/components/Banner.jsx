@@ -22,7 +22,7 @@ const Banner = () => {
           </div>
         </div>
 
-        <Image src="./img_car.png" alt="mobil"></Image>
+        <Image src="./images/img_car.png" alt="mobil"></Image>
       </div>
     </>
   );
