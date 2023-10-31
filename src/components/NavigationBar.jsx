@@ -1,6 +1,6 @@
 import { Navbar, Nav, Container, Image } from 'react-bootstrap';
 
-import RegisterButton from './RegisterButton';
+import Button from './Button';
 
 const NavigationBar = () => {
   return (
@@ -16,7 +16,7 @@ const NavigationBar = () => {
             <Nav.Link>Testimonial</Nav.Link>
             <Nav.Link>FAQ</Nav.Link>
             <Nav>
-              <RegisterButton />
+              <Button position={'px-3'} text={'Register'} />
             </Nav>
           </Nav>
         </Container>

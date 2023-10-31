@@ -1,8 +1,7 @@
 import { Image } from 'react-bootstrap';
 
 import './Banner.css';
-import RentalButton from './RentalButton';
-
+import Button from './Button';
 const Banner = () => {
   return (
     <>
@@ -18,7 +17,7 @@ const Banner = () => {
               siap melayani kebutuhanmu untuk sewa mobil selama 24
               jam.
             </p>
-            <RentalButton />
+            <Button position={'p-2'} text={'Mulai sewa mobil'} />
           </div>
         </div>
 
