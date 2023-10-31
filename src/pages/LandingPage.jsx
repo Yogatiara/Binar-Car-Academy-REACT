@@ -4,6 +4,7 @@ import Service from '../components/landing-page-component/Service';
 import ServiceAdvantages from '../components/landing-page-component/ServiceAdvantages';
 import Feedback from '../components/landing-page-component/Feedback';
 import RentalCard from '../components/landing-page-component/RentalCard';
+import FaqAccordion from '../components/landing-page-component/FaqAccordion';
 
 const LandingPage = () => {
   return (
@@ -31,6 +32,10 @@ const LandingPage = () => {
 
       <div className="mx-118px mt-160px text-center">
         <RentalCard />
+      </div>
+
+      <div className="mx-118px mt-160px">
+        <FaqAccordion />
       </div>
     </>
   );
