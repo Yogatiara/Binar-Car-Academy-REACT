@@ -1,0 +1,22 @@
+.carousel {
+  height: 240px;
+  background-color: #f1f3ff;
+  margin-left: 220px;
+  margin-right: 220px;
+}
+
+.carousel-item {
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 57px;
+  padding-bottom: 57px;
+}
+
+.image {
+  width: 90px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: red; /* Change the color to your desired color */
+}
