@@ -1,7 +1,7 @@
 const ServiceAdvantages = () => {
   return (
     <>
-      <div className="">
+      <div id="why-us">
         <h1 className=" fw-bolder">Why Us</h1>
         <p className=" mt-3">Mengapa harus pilih Binar Car Rental?</p>
       </div>

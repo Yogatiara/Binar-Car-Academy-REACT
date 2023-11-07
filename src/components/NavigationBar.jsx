@@ -11,12 +11,12 @@ const NavigationBar = () => {
             <Image src="./images/logo.png" alt="logo" />
           </Navbar.Brand>
           <Nav className="column-gap-3 fw-medium">
-            <Nav.Link>Our Services</Nav.Link>
-            <Nav.Link>Why Us</Nav.Link>
-            <Nav.Link>Testimonial</Nav.Link>
-            <Nav.Link>FAQ</Nav.Link>
+            <Nav.Link href="#service">Our Services</Nav.Link>
+            <Nav.Link href="#why-us">Why Us</Nav.Link>
+            <Nav.Link href="#testimonial">Testimonial</Nav.Link>
+            <Nav.Link href="#faq">FAQ</Nav.Link>
             <Nav>
-              <Button position={'px-3'} text={'Register'} />
+              <Button position={'px-3'}>Register</Button>
             </Nav>
           </Nav>
         </Container>

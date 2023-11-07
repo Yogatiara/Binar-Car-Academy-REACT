@@ -1,0 +1,25 @@
+.car-filter {
+  width: 1086px;
+  height: 106px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 30%;
+}
+
+.date-picker {
+  padding: 6px;
+  /* border-radius: 5px; */
+}
+
+.w-form {
+  width: 250px;
+}
+
+.padding-button {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.button-search {
+  margin-top: 22px;
+}

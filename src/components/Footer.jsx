@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <>
-      <div className="d-flex flex-row footer">
+      <div className="d-flex flex-row footer mx-118px mt-160px mb-5">
         <address>
           <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
           <p>binarcarrental@gmail.com</p>

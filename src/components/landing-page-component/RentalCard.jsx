@@ -1,7 +1,10 @@
-import './RentalCard.css';
-import Button from '../../components/Button';
+import { useNavigate } from "react-router-dom";
+
+import "./RentalCard.css";
+import Button from "../../components/Button";
 
 const RentalCard = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="rounded-3 text-white rental-card p-5">
@@ -14,7 +17,12 @@ const RentalCard = () => {
           aliqua.
         </p>
         <div className="mt-5">
-          <Button position={'p-2'} text={'Mulai sewa mobil'} />
+          <Button
+            position={"p-2"}
+            navigate={() => navigate("/carSearch")}
+          >
+            Mulai sewa mobil
+          </Button>
         </div>
       </div>
     </>

@@ -1,11 +1,11 @@
-import { Carousel, Image } from 'react-bootstrap';
+import { Carousel, Image } from "react-bootstrap";
 
-import './Feedback.css';
+import "./Feedback.css";
 
 const Feedback = () => {
   return (
     <>
-      <div className="text-center">
+      <div className="text-center" id="testimonial">
         <h1 className="fs-1 fw-bolder">Testimonial</h1>
         <p className=" mt-3">
           Berbagai review positif dari para pelanggan kami

@@ -19,6 +19,11 @@
   margin-right: 118px;
 }
 
+.mx {
+  margin-left: 120px;
+  margin-right: 130px;
+}
+
 .text-color {
   color: black;
 }
@@ -27,17 +32,17 @@
   margin-top: 160px;
 }
 
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.car-card {
+  width: 900px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba(33, 33, 33, 0.8);
+}

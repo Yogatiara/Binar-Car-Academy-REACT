@@ -4,7 +4,7 @@ import './FaqAccordion.css';
 const FaqAccordion = () => {
   return (
     <>
-      <div className="d-flex flex-row faq-accordion">
+      <div className="d-flex flex-row faq-accordion" id="faq">
         <div className="text-center faq-title text-xl-start">
           <h1 className="fw-bolder">Frequently Asked Question</h1>
           <p className="fw-light mt-3">
