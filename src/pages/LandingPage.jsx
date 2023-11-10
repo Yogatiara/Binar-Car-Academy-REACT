@@ -1,10 +1,10 @@
-import Banner from '../components/Banner';
-import Service from '../components/landing-page-component/Service';
-import ServiceAdvantages from '../components/landing-page-component/ServiceAdvantages';
-import Feedback from '../components/landing-page-component/Feedback';
-import RentalCard from '../components/landing-page-component/RentalCard';
-import FaqAccordion from '../components/landing-page-component/FaqAccordion';
-import AppLayout from '../components/AppLayout';
+import Banner from "../components/banner/Banner";
+import Service from "../components/landing-page-component/service/Service";
+import ServiceAdvantages from "../components/landing-page-component/ServiceAdvantages";
+import Feedback from "../components/landing-page-component/feedback/Feedback";
+import RentalCard from "../components/landing-page-component/rental-card/RentalCard";
+import FaqAccordion from "../components/landing-page-component/faq-accordion/FaqAccordion";
+import AppLayout from "../components/AppLayout";
 
 const LandingPage = () => {
   return (

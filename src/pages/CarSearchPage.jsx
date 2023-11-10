@@ -1,35 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 
-import Banner from "../components/Banner";
-import CarFilter from "../components/car-search-page-component/CarFilter";
+import Banner from "../components/banner/Banner";
+import CarFilter from "../components/car-search-page-component/car-filter/CarFilter";
 import AppLayout from "../components/AppLayout";
-import CarCard from "../components/car-search-page-component/CarCard";
+import CarCard from "../components/car-search-page-component/car-card/CarCard";
+import { CarProvider } from "../context/Car";
 
 const CarSearchPage = () => {
-  const [shadow, setShadow] = useState(false);
+  // const [shadow, setShadow] = useState(false);
 
-  const togleShadow = () => {
-    setShadow(!shadow);
-  };
+  // const togleShadow = () => {
+  //   setShadow(!shadow);
+  // };
 
   return (
-    <div>
+    <CarProvider>
       <AppLayout>
-        {shadow && <span className="overlay" />}
-
-        <CarFilter onClick={togleShadow} />
+        {/* <span className="overlay" /> */}
+        <CarFilter />
 
         <Banner showButton={false} />
 
-        <div className="container">
+        <div className="container car-card-list ">
           <div className="row row-cols-3 gy-4 mx-auto ml-3">
-            <CarCard col="col" />
-            <CarCard col="col" />
-            <CarCard col="col" />
+            <CarCard />
           </div>
         </div>
       </AppLayout>
-    </div>
+    </CarProvider>
   );
 };
 

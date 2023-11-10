@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import "./Banner.css";
-import Button from "./Button";
+import Button from "../Button";
 const Banner = ({ showButton }) => {
   const navigate = useNavigate();
 
@@ -16,15 +16,15 @@ const Banner = ({ showButton }) => {
           </h1>
           <div className="mt-4 w-75">
             <p>
-              Selamat datang di Binar Car Rental. Kami menyediakan
-              mobil kualitas terbaik dengan harga terjangkau. Selalu
-              siap melayani kebutuhanmu untuk sewa mobil selama 24
-              jam.
+              Selamat datang di Binar Car Rental. Kami
+              menyediakan mobil kualitas terbaik dengan harga
+              terjangkau. Selalu siap melayani kebutuhanmu untuk
+              sewa mobil selama 24 jam.
             </p>
             {showButton && (
               <Button
                 position={"p-2"}
-                navigate={() => navigate("/carSearch")}
+                onClick={() => navigate("/carSearch")}
               >
                 Mulai sewa mobil
               </Button>

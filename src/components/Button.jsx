@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-const RegisterButton = ({
+const Button = ({
   children,
   position,
-  navigate,
+  onClick,
   width,
   fontSize,
   fontWeight,
@@ -16,8 +16,8 @@ const RegisterButton = ({
             ? "w-100 fs-6 fw-medium"
             : ""
         }`}
-        type="button"
-        onClick={navigate}
+        type="submit"
+        onClick={onClick}
       >
         {children}
       </button>
@@ -25,13 +25,13 @@ const RegisterButton = ({
   );
 };
 
-RegisterButton.propTypes = {
+Button.propTypes = {
   children: PropTypes.string,
   position: PropTypes.string,
   navigate: PropTypes.func,
-  width: PropTypes.string,
-  fontSize: PropTypes.string,
-  fontWeight: PropTypes.string,
+  width: PropTypes.bool,
+  fontSize: PropTypes.bool,
+  fontWeight: PropTypes.bool,
 };
 
-export default RegisterButton;
+export default Button;

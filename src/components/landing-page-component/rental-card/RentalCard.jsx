@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import "./RentalCard.css";
-import Button from "../../components/Button";
+import Button from "../../Button";
 
 const RentalCard = () => {
   const navigate = useNavigate();
@@ -12,14 +12,14 @@ const RentalCard = () => {
           Sewa Mobil di Karang Joang Sekarang
         </h1>
         <p className="pt-3 fs-4  fw-light text-wrap text-center ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.
         </p>
         <div className="mt-5">
           <Button
             position={"p-2"}
-            navigate={() => navigate("/carSearch")}
+            onClick={() => navigate("/carSearch")}
           >
             Mulai sewa mobil
           </Button>

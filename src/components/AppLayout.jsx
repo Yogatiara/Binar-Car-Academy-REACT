@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import NavigationBar from './NavigationBar';
-import Footer from './Footer';
+import NavigationBar from "./NavigationBar";
+import Footer from "./footer/Footer";
 
 const AppLayout = ({ children }) => {
   return (
@@ -14,7 +14,7 @@ const AppLayout = ({ children }) => {
 };
 
 AppLayout.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.array,
 };
 
 export default AppLayout;

@@ -1,0 +1,18 @@
+.car-specification p {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.car-height {
+  min-height: 600px
+}
+
+.desc-background {
+  height: 100px;
+}
+
+.img-background{
+  height: 200px;
+}
+
+
