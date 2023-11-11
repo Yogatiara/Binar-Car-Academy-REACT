@@ -1,19 +1,14 @@
 import { Image } from "react-bootstrap";
-import Button from "../../Button";
-import Loading from "../../Loading";
-import "./CarCard.css";
 import { CarContext } from "../../../context/Car";
 import { useContext } from "react";
 
-const CarCard = () => {
-  const { carData, loading, filterData, filterDate } =
-    useContext(CarContext);
+import Button from "../../Button";
+import Loading from "../../Loading";
+import FilterMessage from "../filter-message/FilterMessage";
+import "./CarCard.css";
 
-  const filteredCars = carData.filter(
-    (car) =>
-      car.available === JSON.parse(filterData) &&
-      car.availableAt.substring(0, 10) === filterDate
-  );
+const CarCard = () => {
+  const { loading, filteredCars } = useContext(CarContext);
 
   return (
     <>
@@ -85,7 +80,7 @@ const CarCard = () => {
               </div>
             ))
           ) : (
-            <div>Mobil tidak ada</div>
+            <FilterMessage />
           )}
         </>
       )}

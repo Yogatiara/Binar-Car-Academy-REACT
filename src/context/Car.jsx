@@ -5,17 +5,31 @@ import getCarData from "../api/api";
 const CarContext = createContext();
 
 const CarProvider = ({ children }) => {
-  const [carData, setCarData] = useState([]);
+  const [carData, setCarData] = useState([
+    { message: "Cari mobil yang ingin disewa" },
+  ]);
   const [loading, setLoading] = useState(false);
   const [filters, setFilters] = useState({
     driverType: null,
     startDate: null,
+    query: null,
+    time: null,
+    filterQuery: null,
     filterDriverType: null,
     filterDate: null,
+    filterTime: null,
   });
 
-  const { filterDriverType, filterDate, driverType, startDate } =
-    filters;
+  const {
+    filterDriverType,
+    filterDate,
+    filterQuery,
+    filterTime,
+    driverType,
+    startDate,
+    query,
+    time,
+  } = filters;
 
   useEffect(() => {
     setLoading(true);
@@ -29,7 +43,7 @@ const CarProvider = ({ children }) => {
       .finally(() => {
         setLoading(false);
       });
-  }, [filterDriverType, filterDate]);
+  }, [filterDriverType, filterDate, filterQuery]);
 
   const handleDriverTypeCar = (type) => {
     setFilters((prevFilters) => ({
@@ -44,22 +58,59 @@ const CarProvider = ({ children }) => {
       startDate: date,
     }));
   };
+
+  const handleQuery = (query) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      query: query,
+    }));
+  };
+
+  const handleTime = (time) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      time: time.substring(0, 2),
+    }));
+  };
+
   const filterExecute = () => {
     setFilters({
       ...filters,
       filterDriverType: driverType,
       filterDate: startDate,
+      filterQuery: query,
+      filterTime: time,
     });
   };
 
+  let filteredCars;
+
+  if (filterQuery) {
+    filteredCars = carData.filter(
+      (car) =>
+        car.available === JSON.parse(filterDriverType) &&
+        car.availableAt.substring(0, 10) === filterDate &&
+        car.availableAt.substring(11, 13) < filterTime &&
+        car.capacity == filterQuery
+    );
+  } else if (!filterQuery || filterQuery == 0) {
+    filteredCars = carData.filter(
+      (car) =>
+        car.available === JSON.parse(filterDriverType) &&
+        car.availableAt.substring(0, 10) === filterDate &&
+        car.availableAt.substring(11, 13) < filterTime
+    );
+  }
+
   const ctxValue = {
     carData: carData,
+    filteredCars: filteredCars,
     loading: loading,
-    filterData: filterDriverType,
-    filterDate: filterDate,
-    handleDriverTypeCar: handleDriverTypeCar,
     filterExecute: filterExecute,
+    handleDriverTypeCar: handleDriverTypeCar,
     handleStartDate: handleStartDate,
+    handleQuery: handleQuery,
+    handleTime: handleTime,
   };
 
   return (

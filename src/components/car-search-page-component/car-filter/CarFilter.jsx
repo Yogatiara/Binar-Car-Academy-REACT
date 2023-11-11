@@ -6,9 +6,14 @@ import "./CarFilter.css";
 import Button from "../../Button";
 import { CarContext } from "../../../context/Car";
 
-const CarFilter = ({ onClick }) => {
-  const { handleDriverTypeCar, filterExecute, handleStartDate } =
-    useContext(CarContext);
+const CarFilter = () => {
+  const {
+    handleDriverTypeCar,
+    filterExecute,
+    handleStartDate,
+    handleQuery,
+    handleTime,
+  } = useContext(CarContext);
 
   return (
     <>
@@ -18,12 +23,13 @@ const CarFilter = ({ onClick }) => {
           <div className="w-form">
             <Form.Select
               aria-label="Default select example"
-              onClick={onClick}
               onChange={(e) =>
                 handleDriverTypeCar(e.target.value)
               }
             >
-              <option disabled>Pilih tipe driver</option>
+              <option value={true || false}>
+                Pilih tipe driver
+              </option>
               <option value={true}>Dengan Sopir</option>
               <option value={false}>
                 Tanpa Sopir(Lepas Kunci)
@@ -46,26 +52,29 @@ const CarFilter = ({ onClick }) => {
           <div className="w-form">
             <Form.Select
               aria-label="Default select example"
-              onClick={onClick}
+              onChange={(e) => handleTime(e.target.value)}
             >
               <option>Pilih Waktu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="08:00">08.00 WITA</option>
+              <option value="10:00">10.00 WITA</option>
+              <option value="12:00">12.00 WITA</option>
+              <option value="14:00">14.00 WITA</option>
+              <option value="16:00">16.00 WITA</option>
             </Form.Select>
           </div>
         </div>
 
         <div>
-          <label htmlFor="date">Jumlah Penumpang</label>
+          <label htmlFor="date">
+            Jumlah Penumpang (optionnal)
+          </label>
           <Form>
-            <Form.Group
-              className="mb-3"
-              controlId="formBasicEmail"
-            >
+            <Form.Group className="mb-3">
               <Form.Control
-                type="email"
+                type="number"
+                min={0}
                 placeholder="Jumlah Penumpang"
+                onChange={(e) => handleQuery(e.target.value)}
               />
             </Form.Group>
           </Form>
@@ -82,10 +91,6 @@ const CarFilter = ({ onClick }) => {
       </div>
     </>
   );
-};
-
-CarFilter.propTypes = {
-  onClick: PropTypes.func,
 };
 
 export default CarFilter;
